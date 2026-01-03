@@ -77,6 +77,11 @@ LED #7 | LED #8 | LED #9
 - If 3 in a row of a color is achieved, the whole board flashes that color several times and then the game resets.
 - If all 9 LEDs are lit without a 3 in a row of any color, the whole board flashes alternating red/blue and then the game resets.
 
+
+
+https://github.com/user-attachments/assets/7d1e7ce6-662b-48b1-90e0-7256749e72a0
+
+
 ## Potential future additions
 
 - Add a debounce for the joystick button
