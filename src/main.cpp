@@ -52,8 +52,6 @@ void updateCursorPosition(GameState &gameState)
   static const int UP_THRESHOLD = 400;
   static const int DOWN_THRESHOLD = 800;
 
-  // todo add a deadzone around center so that writes aren't sent when joystick is centered
-
   // Prevent the joystick from moving too fast
   static const unsigned long JOYSTICK_LIMITER_MS = 300;
   static unsigned long lastMoveMs = 0;
@@ -182,8 +180,6 @@ int checkForGameOver(const uint8_t ticTacToe[9])
     }
   }
 
-  // todo could later add a check for whether no win is possible (all possible three in a rows contain both X and O)
-
   if (isBoardFull(ticTacToe))
   {
     return 3; // stalemate
@@ -212,8 +208,6 @@ void updateBoard(GameState &gameState)
 
   if (buttonValue == LOW && lastButtonValue == HIGH && gameState.ticTacToe[gameState.cursorPosition] == 0)
   {
-    // todo may want to add button debounce later
-
     // Update tic tac toe board
     gameState.ticTacToe[gameState.cursorPosition] = gameState.isXTurn ? 1 : 2;
 
@@ -231,7 +225,6 @@ void renderLEDs(uint8_t bytesToRender[3])
 {
   digitalWrite(LATCH_PIN, LOW);
 
-  // todo look into using direct port writes instead of shiftOut
   shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, bytesToRender[2]); // shift register 3
   shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, bytesToRender[1]); // shift register 2
   shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, bytesToRender[0]); // shift register 1
