@@ -63,11 +63,11 @@
 - All LED cathodes to ground
 - LEDs should be in a 9x9 grid. The code assumes this layout:
 
-Column 1 | Column 2 | Column 3
----|---|---
-LED #1 | LED #2 | LED #3
-LED #4 | LED #5 | LED #6
-LED #7 | LED #8 | LED #9
+  Column 1 | Column 2 | Column 3
+  --- | --- | ---
+  LED #1 | LED #2 | LED #3
+  LED #4 | LED #5 | LED #6
+  LED #7 | LED #8 | LED #9
 
 ## Output
 
@@ -77,10 +77,9 @@ LED #7 | LED #8 | LED #9
 - If 3 in a row of a color is achieved, the whole board flashes that color several times and then the game resets.
 - If all 9 LEDs are lit without a 3 in a row of any color, the whole board flashes alternating red/blue and then the game resets.
 
-
+Demo:
 
 https://github.com/user-attachments/assets/7d1e7ce6-662b-48b1-90e0-7256749e72a0
-
 
 ## Potential future additions
 
